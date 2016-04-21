@@ -41,9 +41,9 @@ public class KqEntity{
 				startTimeC.get(Calendar.MONTH)+1,
 				startTimeC.get(Calendar.DATE),
 				18,
-				endTime,
-				Arith.sub(endTime , 18)
-		);
+                Arith.round(endTime),
+                Arith.sub(endTime, 18)
+                );
 	}
 	public String getNonWorkTimeDoc(){
 		Calendar startTimeC = getStartTimeC();
@@ -58,8 +58,8 @@ public class KqEntity{
 				startTimeC.get(Calendar.YEAR),
 				startTimeC.get(Calendar.MONTH)+1,
 				startTimeC.get(Calendar.DATE),
-				startTime,
-				endTime,
+				Arith.round(startTime),
+                Arith.round(endTime),
 				Arith.sub(endTime,startTime)
 		);
 	}

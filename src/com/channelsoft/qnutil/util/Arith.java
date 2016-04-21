@@ -49,6 +49,30 @@ public class Arith {
     public static double div(double value1,double value2,int mode){
         BigDecimal b1 = new BigDecimal(String.valueOf(value1));
         BigDecimal b2 = new BigDecimal(String.valueOf(value2));
-        return b1.divide(b2,2, mode).doubleValue();
+        return b1.divide(b2, 2, mode).doubleValue();
     }
+
+    public static double round(double v, int scale) {
+        if (scale < 0){
+            throw new IllegalArgumentException("The scale must be a positive integer or zero");
+        }
+        BigDecimal b = new BigDecimal(Double.toString(v));
+        BigDecimal one = new BigDecimal("1");
+        return b.divide(one, scale, BigDecimal.ROUND_HALF_UP).doubleValue();
+    }
+    public static Integer round(double v) {
+        int scale = 0;
+        if (scale < 0){
+            throw new IllegalArgumentException("The scale must be a positive integer or zero");
+        }
+        BigDecimal b = new BigDecimal(Double.toString(v));
+        BigDecimal one = new BigDecimal("1");
+        return b.divide(one, scale, BigDecimal.ROUND_HALF_UP).intValue();
+    }
+    public static void main(String args[]){
+        double a = 4.515;
+        Double round = Arith.round(a, 0);
+        System.out.println(round.intValue());
+    }
+
 }
