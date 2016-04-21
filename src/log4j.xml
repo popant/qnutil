@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- STRUTSCX LOG4J CONFIGURATION - XML style -->
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- 控制台 -->
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d %-5p -[%t]  - [%C{1}] %m%n" />
+		</layout>
+	</appender>
+
+	<!-- 整个一个文件 -->
+	<appender name="FILE"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/dvc/dvc.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d %-5p -[%t]  - [%C{1}] %m%n" />
+		</layout>
+	</appender>
+
+	<!-- 一天一个文件 -->
+	<appender name="DAILY"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/dvc/dvc.log" />
+		<!-- 设置是否在重新启动服务时，在原有日志的基础添加新日志 -->
+		<param name="Append" value="true" />
+		<!-- 每天0时归档成一个文件 -->
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d %-5p -[%t]  - [%C{1}] %m%n" />
+		</layout>
+	</appender>
+	
+	<!-- 对警告日志单独记录日志备份 -->
+	<appender name="WARN" class="org.apache.log4j.RollingFileAppender">   
+		<param name="File" value="logs/dvc/warn/dvc_warn.log" />   
+		<param name="MaxFileSize" value="51200KB" />   
+		<param name="MaxBackupIndex" value="10" />   
+		<!-- 设置是否在重新启动服务时，在原有日志的基础添加新日志 -->
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d %-5p -[%t]  - [%C{1}] %m%n" />
+		</layout>   
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">     
+		  <param name="LevelMin" value="WARN" />     
+		  <param name="LevelMax" value="ERROR" />     
+		</filter>   
+	</appender>
+
+	<!--<logger name="com.qnuse">-->
+		<!--<level value="DEBUG" />-->
+	<!--</logger>-->
+	
+	<logger name="com.channelsoft">
+		<level value="DEBUG" />
+	</logger>
+	
+	<root>
+		<level value="DEBUG" />
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="DAILY" />
+	</root>
+</log4j:configuration>

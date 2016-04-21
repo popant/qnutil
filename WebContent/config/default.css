@@ -1,0 +1,554 @@
+/*/------------------------------------------------------------------\*/
+/*|           A P P L I C A T I O N - S E R V E R S . C O M          |*/
+/*|                      ( I M P R O V E . F R )                     |*/
+/*|                                                                  |*/
+/*| Skin          : d\u00e9faut (AppServersDefaultSkin.css)               |*/
+/*| Compatibilit\u00e9 : 1.5.4.PPR                                        |*/ 
+/*| Derni\u00e8re maj  : 20000629                                         |*/
+/*|                                                                  |*/
+/*\------------------------------------------------------------------/*/
+
+@import url(messages.css);
+
+/*/------------------------------------------------------------------\*/
+/*|                                                                  |*/
+/*|                      Configuration du BODY                       |*/
+/*|                                                                  |*/
+/*\------------------------------------------------------------------/*/
+
+BODY {font-fSYSily: "宋体"; font-size: 9pt; color: #000000; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; background-color: #FFFFFF}
+table {font-fSYSily: "宋体"; font-size: 9pt; line-height: 20px; color: #000000;}
+
+/*/------------------------------------------------------------------\*/
+/*|                                                                  |*/
+/*|                          Barre de menu                           |*/
+/*|                                                                  |*/
+/*\------------------------------------------------------------------/*/
+
+.barremenu {
+	color            : #336699;
+	font-family      : arial;
+	font-size        : 11px;
+      font-weight      : bold;
+}
+A.barremenu         {color : #03407E; text-decoration:underline;font-family : arial; font-size: 11px; font-weight:bold;  }
+A.barremenu:Visited {color : #008CE3; text-decoration : none;}
+A.barremenu:Active  {color : #6489A0; text-decoration : none;}
+A.barremenu:Hover   {color : #CC0000; text-decoration : none; }
+
+
+/*/------------------------------------------------------------------\*/
+/*|                                                                  |*/
+/*|                         Description news                         |*/
+/*|                                                                  |*/
+/*\------------------------------------------------------------------/*/
+
+
+/* Titre d'une news */
+.titrenews {
+	  color            : #CC0000;
+	  background-color : #FFE787;
+	  font-family      : arial;
+	  font-size        : 14px;
+	  font-weight      : bold;
+}
+
+/* Titre commentaire d'une news */
+.titrecommentaires {
+       color            : #CC0000;
+       background-color : #FFE787;
+	 font-family      : arial;
+  	 font-size        : 12px;
+  	 font-weight      : bold;
+ }
+
+/* haut news (colonne \u00e0 droite)*/
+.colonnedroite {
+     /* background-color : white; */
+}
+
+/*zhengwei*/
+.treeNode {CURSOR: hand; 
+           font-family : arial; 
+           font-size: 11px; 
+           font-weight:bold;
+           color : #0000FF; 
+           /*
+           FONT-FSYSILY: "宋体"; 
+           */
+           PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; 
+           PADDING-RIGHT: 1px; PADDING-TOP: 1px 
+}
+
+/* Corps d'une news */
+.corpsnews {
+      font-family: verdana;
+      font-size: 12px;
+}
+
+/* Liens dans les news */
+
+A         {color : #242EFE; text-decoration : none;}
+A:Visited {color : #242EFE; text-decoration : none;}
+A:Active  {color : #242EFE; text-decoration : none;}
+A:Hover   {color : #CC0000; text-decoration : underline; }
+
+
+/*/------------------------------------------------------------------\*/
+/*|                                                                  |*/
+/*|                      Carr\u00e9 Information News                      |*/
+/*|                                                                  |*/
+/*\------------------------------------------------------------------/*/
+
+
+/* Ecriture et fond dans le carr\u00e9 quand non Lire plus et non comment\u00e9 */
+.infonews {
+             color : #555555;
+	background-color: #E7E8F1;
+       font-family : arial;
+         font-size : 10px;
+       font-weight : bold;
+}
+
+/* Ecriture et fond dans le carr\u00e9 quand Lire plus ou comment\u00e9 */
+.infonewsactif {
+       font-family : arial;
+         font-size : 10px;
+       font-weight : bold;
+             color : #555555;
+	background-color: #FFE787;
+}
+
+/* Liens en non Lire plus et non comment\u00e9 */
+A.infonews         {color : #6489A0; text-decoration : underline;}
+A.infonews:Visited {color : #6489A0; text-decoration : none;}
+A.infonews:Active  {color : #6489A0; text-decoration : none;}
+A.infonews:Hover   {color : #CC0000; text-decoration : none; }
+
+
+/* Liens en Lire Plus ou comment\u00e9, sauf lien Commenter */
+A.infonewsactif         {color : #CC0000; text-decoration : underline;}
+A.infonewsactif:Visited {color : #CC0000; text-decoration : none;}
+A.infonewsactif:Active  {color : #CC0000; text-decoration : none;}
+A.infonewsactif:Hover   {color : #FFFFFF; text-decoration : none;}
+
+/* Liens Commenter dans un carr\u00e9 Lire plus ou comment\u00e9 */
+A.infonewspassif         {color : #6489A0; text-decoration : underline;}
+A.infonewspassif:Visited {color : #6489A0; text-decoration : none;}
+A.infonewspassif:Active  {color : #6489A0; text-decoration : none;}
+A.infonewspassif:Hover   {color : #CC0000; text-decoration : none;}
+
+
+/*/------------------------------------------------------------------\*/
+/*|                                                                  |*/
+/*|                  Page Tous les sujets (topics)                   |*/
+/*|                                                                  |*/
+/*\------------------------------------------------------------------/*/
+
+P.topics { 
+             color : #336699; 
+  background-color : #FFFFFF; 
+       font-weight : bold;
+}
+
+H1.titres {
+  color : #FFEC00;
+}
+
+/*/------------------------------------------------------------------\*/
+/*|                                                                  |*/
+/*|                        Configuration Struts                      |*/
+/*|                                                                  |*/
+/*\------------------------------------------------------------------/*/
+
+.MENU {
+	background-color: #E7E8F1;
+}
+
+P.FORM {
+	height: 24; 
+	font-size: 9pt; 
+	background-color: #9FB4D9; 
+	text-align:left; 
+	margin-left:0; 
+	margin-right:0;
+	font-weight: bold;
+	margin:1;
+	text-indent: 2pt;
+	width: 99%;
+}
+
+/***********************************************
+ * color of the thin line surrounding the form *
+ **********************************************/
+TABLE.FORM {		
+		font-size: 9pt; background-color: #9FB4D9;
+		width:98%;
+}
+TABLE.HIDDENFORM {		
+		font-size: 9pt; background-color: #9FB4D9;
+		width:98%;
+		display: "none";
+}
+
+/**************************************
+ * background color of the form title *
+ *************************************/
+TH.FORM {
+		font-size: 9pt; background-color: #9FB4D9; text-align:left;  margin-left:1; margin-right:1;
+}
+/********************************
+ * background color of the form *
+ *******************************/
+TD.FORM {
+		font-size: 9pt; background-color: #ffffff;  margin-left:1; margin-right:1;	
+}
+
+/*******************************
+ *  background color to use to *
+ *  display the errors         *
+ ******************************/
+TD.ERROR {
+		background-color : #CC0000;
+}
+
+/**
+ * Le style FORM servant aussi pour les listes, il faut rajouter ceci pour les listes triables.
+ */
+TH.FORM TR TD {
+		color      : #FFFFFF;
+		background-color : #336699;
+		font-weight: bold;
+		font-family : verdana;
+}
+
+/******************************
+ *    class used to display   *
+ *    the input field labels  *
+ *****************************/
+
+.LABEL {
+	font-family : verdana;
+	font-size : 12;
+ 	color : #336699;	
+}
+
+SPAN.LABEL {
+}
+TH.LABEL {
+		text-align:right;
+}
+
+
+.LABELLEFT {
+	font-family : verdana;
+	font-size : 12;
+ 	color : #336699;	
+}
+
+SPAN.LABELLEFT {
+}
+TH.LABELLEFT {
+		text-align:left;
+}
+
+.COMMENT {
+	color      : #336699; 
+	font-style : bold; 
+	font-family: verdana;
+	text-align : center;
+}
+
+.TOPLINK {
+	font-style : verdana;
+	text-align : left;
+}
+
+
+/*******************************************
+ * class for the title of the subscription *
+ ******************************************/
+P.SUBSCRIPTION {
+		  color : #336699;
+		  font-family: arial;
+		  font-weight : bold;
+		  text-align : center;
+		  font-size : 16px;
+}
+/********************************************************
+ * color of the thin line surrounding the subscriptions *
+ *******************************************************/
+TABLE.SUBSCRIPTION {
+		background-color : #336699;
+}
+/*************************
+ * class for the headers *
+ ************************/
+TH.SUBSCRIPTION {
+		color      : #FFFFFF;
+		background-color : #336699;
+		font-weight: bold;			
+}
+/*******************************
+ * class for the subscriptions *
+ ******************************/
+TD.SUBSCRIPTION {
+
+		color      : #336699;
+		background-color : #FFFFFF;
+}
+
+.clsAction {
+	FONT-SIZE: 10px; COLOR: #053c6d; FONT-FAMILY: 宋体, Arial, Helvetica, sans-serif;width:100%
+}
+
+.ongletMain {
+	BORDER-RIGHT: #002C82 1px solid; BORDER-TOP: medium none; BORDER-LEFT: #002C82 1px solid; BORDER-BOTTOM: #002C82 1px solid; BACKGROUND-COLOR: #FFFFFF
+}
+.ongletTextEna {
+	height:24px;
+	BORDER-RIGHT: #002C82 0px solid; 
+	BORDER-TOP: #002C82 0px solid;  
+	FONT-SIZE: 12px; 
+	BORDER-LEFT: #002C82 0px solid; 
+	COLOR: #ffffff; 
+	BORDER-BOTTOM: medium none; 
+	FONT-FAMILY: 宋体; 
+	BACKGROUND-COLOR: #5B80C9; 
+	TEXT-ALIGN: center;
+	background-image : url('bot_bg1.gif');
+}
+.ongletTextDis {
+	background-image : url('bot_bg1.gif');height:24px; BORDER-RIGHT: #002C82 0px solid; BORDER-TOP: #002C82 0px solid; FONT-SIZE: 12px; BORDER-LEFT: #002C82 0px solid; COLOR: #002C82; BORDER-BOTTOM: #002C82 1px solid; FONT-FAMILY: 宋体; BACKGROUND-COLOR: #FFF5B5; TEXT-ALIGN: center
+}
+.ongletTextErr {
+	BORDER-RIGHT: #c5c5c5 1px solid; BORDER-TOP: #c5c5c5 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #c5c5c5 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #80add6 2px solid; FONT-FAMILY: 宋体; BACKGROUND-COLOR: #ed4f50; TEXT-ALIGN: center
+}
+.ongletMiddle {
+	BORDER-RIGHT: #002C82 1px solid; BORDER-TOP: medium none; BORDER-LEFT: #002C82 1px solid; BORDER-BOTTOM: medium none; BACKGROUND-COLOR: #Ffffff
+}
+.ongletSpace {
+	BORDER-BOTTOM: #002C82 1px solid
+}
+
+/**
+ * Calendar classes
+ */
+
+TD.CALENDRIER {
+	color: #336699;
+	background-color: #C2C2C2; 
+	font-weight: bold; 
+	text-align: center; 
+	font-size: 10px;
+}
+
+A.CALENDRIER {
+	text-decoration: none; 
+	font-size: 10px;	
+	color: #336699; //#000000;
+}
+
+.CALENDARBORDER {
+	background-color: #336699; //#000000; 
+}
+
+.CALENDARTITLE {
+	background-color: #336699; //#C9252C;
+}
+
+.CALENDARWEEK {
+	background-color: #FFFFFF;
+}
+
+.CALENDARWEEKEND {
+	background-color: #FFF4E5;
+}
+
+.CALENDARSELECTED {
+	background-color: #FF8F01;
+}
+
+/************************************
+ *         Datagrid styles          *
+ ************************************/
+
+TABLE.DATAGRID {
+	background-color : #336699;
+}
+
+TH.DATAGRID {	
+		color      : #FFFFFF;
+		background-color : #336699;
+		font-weight: bold;
+		font-family : verdana;
+}
+
+TABLE.DATAGRID TR TD {	
+	font-family : verdana;
+	padding: 2px;
+}
+
+TR.DATAGRID {		
+	background-color : #FFFFFF;	
+}
+
+TR.DATAGRID2 {		
+	background-color : #FFFFFF;	
+}
+
+.DATAGRID_SEL {
+	background-color : #336699;	
+}
+
+.DATAGRID_DEL {
+	text-decoration: line-through;
+}
+
+TR.DATAGRID_DEL TD INPUT {
+	text-decoration: line-through;
+}
+
+TABLE.DATAGRID TR TD INPUT {		
+	width: 100%;
+}
+
+/********************************************************
+ * color of the thin line surrounding the collection *
+ *******************************************************/
+TABLE.COLLECTION{
+	font-size: 9pt; background-color: #9FB4D9;
+  width:100%;
+}
+
+TH.COLLECTION {
+	font-size: 9pt; background-color: #DEE6F9; text-align:center;  margin-left:1; margin-right:1;
+}
+TD.COLLECTION {
+	font-size: 9pt; background-color: #FBFDFF;  margin-left:1; margin-right:1;word-break: break-all; word-wrap:break-word;
+	background-color: expression(this.parentElement.rowIndex%2==1?'#FFFFFF':'#EEEEEE');
+}
+TH.COLLECTION TR TD {
+		background-color : #DEE6F9;
+		font-weight: bold;
+		font-family : verdana;
+}
+P.COLLECTION {
+	height: 24; 
+	font-size: 9pt; 
+	background-color: #9FB4D9; 
+	text-align:left;
+	padding:1px;
+	font-weight: bold;
+	margin:1;
+	text-indent: 2pt;
+	width:100%;
+}
+
+TABLE.PAGER{
+	font-size: 9pt; 
+  width:100%;
+  text-align:right;
+  background-color: #9FB4D9;
+  height: 24;
+  float:center;
+}
+
+INPUT.PAGER{
+	BACKGROUND: #f2f2f2; BORDER-BOTTOM: #333333 1px solid; BORDER-LEFT: #333333 1px solid; BORDER-RIGHT: #333333 1px solid; BORDER-TOP: #333333 1px solid; COLOR: #333333; CURSOR: hand; FONT-FSYSILY: "宋体"; FONT-SIZE: 9pt; HEIGHT: 19px; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px
+}
+
+INPUT {FONT-SIZE: 12px; BACKGROUND-COLOR: #FFFFFF;}
+.inputnormal {BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #F7FFFF;}
+.inputnotnull {BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #FFFFEE;}
+.inputhidden {border:1px solid #999999; FONT-SIZE: 12px; BACKGROUND-COLOR: #FFFF00; width:0}
+.inputreadonly {BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #E1E1E1; readOnly:expression(this.readOnly=true);}
+
+.button {BACKGROUND: #f2f2f2; BORDER-BOTTOM: #333333 1px solid; BORDER-LEFT: #333333 1px solid; BORDER-RIGHT: #333333 1px solid; BORDER-TOP: #333333 1px solid; COLOR: #333333; CURSOR: hand; FONT-FSYSILY: "宋体"; FONT-SIZE: 9pt; HEIGHT: 19px; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px}
+
+
+.dgr {font-size: 9pt; background-color: #9FB4D9;}
+.dgrtitle {height: 24; font-size: 9pt; background-color: #9FB4D9; text-align:left;  margin-left:1; margin-right:1;}
+.dgrhead {font-size: 9pt; background-color: #DEE6F9; text-align:left;  margin-left:1; margin-right:1;}
+.dgrcell {font-size: 9pt; background-color: #F7FFFF;  margin-left:1; margin-right:1;}
+.dgrbottom  {width:90.2%; float:center; text-align:right;height: 24; font-size: 9pt; background-color: #9FB4D9; margin-left:1; margin-right:1;}
+.dgrselectedcell {font-size: 9pt; background-color: #FFE5F0;  margin-left:1; margin-right:1;}
+
+
+thead tr {
+  background-color: #DEE6F9;
+}
+th.sorted {
+    background-color: #DEE6F9;
+}
+th a, th a:visited {
+  color: black;
+}
+th a:hover {
+  text-decoration: underline;
+  color: black;
+}
+th.sorted a, th.sortable a {
+	background-position: right;
+	background-repeat: no-repeat;
+	display: block;
+	width: 100%;
+}
+th.sortable a {
+  background-position: right;
+	background-image: url(arrow_off.png);
+}
+th.order1 a {
+	background-image: url(arrow_up.png);
+}
+th.order2 a {
+	background-image: url(arrow_down.png);
+}
+tr.odd {
+  font-size: 9pt; background-color: #F7FFFF;  margin-left:1; margin-right:1;
+}
+tr.tableRowEven, tr.even {
+  font-size: 9pt; background-color: #F7FFFF;  margin-left:1; margin-right:1;
+}
+
+
+
+td  {font-size:9pt;}
+.tdtitle {border-bottom:1px solid #000000;color:#4867AE;font-weight:bold;font-size:10pt}
+.tdtitle1 { background-color:#E1E8F5;color:#01215A;font-size:9pt;height: 24px;padding-left:1em }
+.tdtitle2 { background-color:#E1E8F5}
+.tda {border-bottom:1px solid #A1C7F5;}
+.tr1{background-color:#E9CCA7}
+.table-border{ background-color:#4A6DB2;height: 24px; }
+.table-content1{ background-color:#FEF9E4 ;color:black;  font-size: 9pt;height: 20px;}
+.table-content2{ background-color:#ffffff;color:black; font-size: 9pt;height: 20px;}
+.tdstyle{border:1 solid #4A6DB2}
+.tdinput{
+	background-color: #F4C09D;
+	width:35%}
+.tablestyle{
+	border:1 solid #000000;
+	border-spacing: 0px;
+	width: 100%
+}
+
+.LABEL1 {
+	BACKGROUND-COLOR: #ffffff; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: 宋体; margin-left:1; margin-right:1;
+}
+.LABEL2 {
+	BACKGROUND-COLOR: #F2F3F4; FONT-SIZE: 12px; COLOR: #000000; line-height:170%; FONT-FAMILY: 宋体; margin-left:1; margin-right:1;
+}
+.bg-control {
+	BACKGROUND-POSITION: center bottom; BACKGROUND-ATTACHMENT: fixed; BACKGROUND-REPEAT: no-repeat
+}
+
+.property {font-size: 9pt; background-color: #9FB4D9;}
+.propertytitle {font-size: 9pt; background-color: #DEE6F9; text-align:left;  margin-left:1; margin-right:1;}
+.propertycontent {font-size: 9pt; background-color: #F7FFFF; text-align:left;  margin-left:1; margin-right:1;}
+
+
+
+
+/* by Li Yong:  to hide or show */
+.HIDDEN {display:none}
+.SHOW {display:block}

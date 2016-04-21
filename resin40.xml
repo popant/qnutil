@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resin xmlns="http://caucho.com/ns/resin" xmlns:resin="urn:java:com.caucho.resin">
+	<log-handler name="" level="all" path="stdout:"
+		timestamp="[%y-%m-%d %H:%M:%S.%s] {%{thread}} " />
+
+	<!-- - level='info' for production - 'fine' or 'finer' for development and 
+		troubleshooting -->
+	<logger name="com.caucho" level="info" />
+	<logger name="com.caucho.java" level="config" />
+	<logger name="com.caucho.loader" level="config" />
+
+	<class-loader>
+		<tree-loader path="${resin.root}/ext-lib" />
+		<library-loader path="WEB-INF/lib" />
+	</class-loader>
+	<cluster id="app-tier">
+		<resin:import path="classpath:META-INF/caucho/app-default.xml" />
+		<server id="" address="127.0.0.1" port="6800">
+			<http address="*" port="8080" />
+		</server>
+		<host id="" root-directory=".">
+			<web-app id="/" root-directory="F:\ieaworkspace\study\qnutil\WebContent" />
+		</host>
+	</cluster>
+</resin>
