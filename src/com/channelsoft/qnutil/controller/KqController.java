@@ -99,11 +99,13 @@ public class KqController{
             if("加班".equals(entry.getKey())){
                 KqEntity kqEntity = trueMap.get(dateStr);
                 Calendar startTimeC = kqEntity.getStartTimeC();
-                nomalSb.append(String.format("%s.%s.%s", startTimeC.get(Calendar.YEAR),startTimeC.get(Calendar.MONTH)+1,startTimeC.get(Calendar.DATE))).append("/");
+//                nomalSb.append(String.format("%s.%s.%s", startTimeC.get(Calendar.YEAR),startTimeC.get(Calendar.MONTH)+1,startTimeC.get(Calendar.DATE))).append("/");
+                nomalSb.append(String.format("%s.%s", startTimeC.get(Calendar.MONTH)+1,startTimeC.get(Calendar.DATE))).append("/");
             }else if("假日加班".equals(entry.getKey())){
                 KqEntity kqEntity = trueMap.get(dateStr);
                 Calendar startTimeC = kqEntity.getStartTimeC();
-                holidaySb.append(String.format("%s.%s.%s", startTimeC.get(Calendar.YEAR),startTimeC.get(Calendar.MONTH)+1,startTimeC.get(Calendar.DATE))).append("/");
+//                holidaySb.append(String.format("%s.%s.%s", startTimeC.get(Calendar.YEAR),startTimeC.get(Calendar.MONTH)+1,startTimeC.get(Calendar.DATE))).append("/");
+                holidaySb.append(String.format("%s.%s", startTimeC.get(Calendar.MONTH)+1,startTimeC.get(Calendar.DATE))).append("/");
             }
         }
 		if("加班".equals(entry.getKey()) && nomalSb.length() > 0){
